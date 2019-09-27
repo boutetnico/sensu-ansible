@@ -119,6 +119,7 @@ sensu_uchiwa_refresh: 5
 sensu_uchiwa_api_port: "{{ sensu_api_port }}"
 sensu_uchiwa_auth_privatekey: ~
 sensu_uchiwa_auth_publickey: ~
+sensu_uchiwa_loglevel: warn
 
 # CentOS repository for redis and rabbitmq
 sensu_centos_repository: epel
