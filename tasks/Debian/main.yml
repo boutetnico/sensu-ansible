@@ -39,3 +39,11 @@
   apt:
     name: "{{ sensu_package }}"
     state: "{{ sensu_pkg_state }}"
+
+- name: ensure sensu user belongs to its additional groups
+  user:
+    append: true
+    groups: "{{ sensu_groups_names | join(',') }}"
+    name: "{{ sensu_user_name }}"
+  when: sensu_groups_names | length > 0
+  notify: restart sensu-client service

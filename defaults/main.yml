@@ -72,6 +72,7 @@ sensu_pkg_state: present
 sensu_gem_state: present
 sensu_plugin_gem_state: present
 sensu_group_name: sensu
+sensu_groups_names: []
 sensu_include_plugins: true
 sensu_include_dashboard: false
 sensu_master: false
