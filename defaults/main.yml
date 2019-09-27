@@ -91,6 +91,7 @@ sensu_deploy_rabbitmq_config: true
 sensu_deploy_redis_config: true
 sensu_deploy_transport_config: true
 sensu_enable_tessen: false
+sensu_log_level: info
 
 # Sensu/RabbitMQ SSL certificate properties
 sensu_ssl_gen_certs: true

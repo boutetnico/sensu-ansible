@@ -47,3 +47,14 @@
     name: "{{ sensu_user_name }}"
   when: sensu_groups_names | length > 0
   notify: restart sensu-client service
+
+- name: Ensure sensu log_level is set
+  lineinfile:
+    dest: /etc/default/sensu
+    regexp: '^LOG_LEVEL'
+    line: 'LOG_LEVEL={{ sensu_log_level }}'
+  notify:
+    - restart sensu-server service
+    - restart sensu-api service
+    - restart sensu-enterprise service
+    - restart sensu-client service
