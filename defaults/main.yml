@@ -9,6 +9,8 @@ se_pass: ''
 sensu_package: sensu
 sensu_enterprise_package: sensu-enterprise
 sensu_enterprise_dashboard_package: sensu-enterprise-dashboard
+sensu_extra_packages: []
+sensu_extra_pip_packages: []
 
 # Sensu repo urls
 sensu_yum_repo_url: "https://eol-repositories.sensuapp.org/yum/$releasever/$basearch/"

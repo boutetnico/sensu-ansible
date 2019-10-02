@@ -51,3 +51,15 @@
   pkgng:
     name: "{{ sensu_package }}"
     state: "{{ sensu_pkg_state }}"
+
+- name: Ensure extra packages are installed
+  tags: setup
+  pngng:
+    name: "{{ sensu_extra_packages }}"
+    state: present
+
+- name: Ensure extra pip packages are installed
+  tags: setup
+  pip:
+    name: "{{ sensu_extra_pip_packages }}"
+    state: present
