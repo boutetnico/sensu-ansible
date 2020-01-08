@@ -54,7 +54,7 @@
 
 - name: Ensure extra packages are installed
   tags: setup
-  pngng:
+  pkgng:
     name: "{{ sensu_extra_packages }}"
     state: present
 
